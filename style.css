@@ -1,18 +1,73 @@
 /*CSS for index.html*/
 
+:root{
+    --indexBrown:rgb(66, 31, 31);
+}
+
+/*INDEX SELECTORS*/
+
 /*index body*/
 body.homePage{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*index header*/
+header.homePage{
+    background-color: var(--indexBrown);
+    color:rgb(249, 246, 243);
+    line-height:1.4rem;
+}
+
 /*index article*/
-article.homePage{
+article.homePage, aside.homePage{
     margin: 2rem;
 }
 
-/*article header*/
+/*index secondaryBox*/
+.secondaryBox{
+    background-image:url(images/index.smiley.jpg);
+    height: 60vw;
+}
+
+/*index aside*/
+aside.homePage{
+    background-color:rgb(150, 175, 174);
+    padding-left: 1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.75em;
+}
+
+/*index footer*/
+footer > div{
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-style: dashed;
+    font-size: smaller;
+
+}
+
+/*INDEX TEXT FORMATING*/
+
+/*index article header*/
 #article-header1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 500;
+    font-size: 2rem;
 }
+
+/*index article ingress*/
+#ingress{
+    font-weight: 700;
+    color: rgb(51, 51, 51);
+}
+
+/*index article paragaph*/
+aside.homePage > p{
+    font-family:'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: larger;
+}
+
+
