@@ -34,15 +34,6 @@ aside.homePage{
     padding-bottom: 0.75em;
 }
 
-/*index footer*/
-footer > div{
-    margin-left: 2rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    border-style: dashed;
-    font-size: smaller;
-
-}
 
 /** INDEX TEXT FORMATING **/
 
@@ -66,6 +57,85 @@ aside.homePage > p{
     font-size: larger;
 }
 
+
+/** GRID **/
+@media (max-width: 839px){
+    .secondaryBox{
+        grid-column: 1/2;
+        grid-row: 2;
+        background-image:url(images/index.smiley.jpg);
+        background-size: cover;
+        height: 90vw;
+        max-height: 60vw;
+    }
+
+    /*index footer*/
+    footer > div{
+        margin-left: 2rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        border-style: dashed;
+        font-size: smaller;
+    }
+}
+
+
+@media (min-width: 840px){
+    .indexGridContainer{
+        display: grid;
+        grid-template-columns: minmax(500px, 40vw) minmax(300px, 20vw) auto;
+        grid-template-rows: minmax(100px, auto);
+    }
+
+    .mainbox{
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+
+    .secondaryBox{
+        grid-column: 1/2;
+        grid-row: 2; 
+        background-image:url(images/index.smiley.jpg);
+        background-size: cover;
+        height: 40vw;
+        max-height: 300px;
+    }
+
+    aside{
+        grid-column: 2/3;
+        grid-row: 1;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: minmax(200px, 20vw), minmax(200px, 20vw), minmax(200px, 20vw) auto;
+        border-style: dashed;
+        border-width: 4px;
+        border-color: rgb(52, 50, 50);
+        border-radius: 20px;
+    }
+
+    .footerLeft{
+        grid-column: 1/2;
+        grid-row: 3;
+        padding-left: 1rem;
+    }
+
+    .footerMiddle{
+        grid-column: 1/2;
+        grid-row: 3;
+        border-left: rgb(52, 50, 50);
+        border-right: rgb(52, 50, 50);
+        padding-left: 1rem;
+    }
+
+    .footerRight{
+        grid-column: 1/2;
+        grid-row: 3;
+        padding-left: 1rem;
+    }
+
+}
 
 /** HAMBRUGER MENU **/
 
