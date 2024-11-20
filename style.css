@@ -190,7 +190,7 @@ aside.homePage > p{
 
 }
 
-/** CSS for git page **/
+/** CSS for the git page **/
 
 /* Nav menu */
 
@@ -200,6 +200,7 @@ aside.homePage > p{
 
 body.git {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 header.git-menu {
@@ -259,3 +260,26 @@ div.git-nav-text {
 
 /* Article */
 
+article.git-article {
+    max-width: 80%;
+    margin: 3rem auto;
+}
+
+div.git-article {
+    margin: 3rem;
+}
+
+ul.git-image-container {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+ul.git-image-container > li:first-child {
+    margin-right: 1rem;
+}
+
+img.git-image {
+    max-width: 100%;
+}
