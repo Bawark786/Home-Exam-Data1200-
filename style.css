@@ -1,10 +1,8 @@
-/*CSS for index.html*/
+/** CSS for index.html **/
 
-:root{
-    --indexBrown:rgb(66, 31, 31);
-}
+:root{--indexBrown:rgb(66, 31, 31);}
 
-/*INDEX SELECTORS*/
+/** INDEX SELECTORS **/
 
 /*index body*/
 body.homePage{
@@ -20,9 +18,7 @@ header.homePage{
 }
 
 /*index article*/
-article.homePage, aside.homePage{
-    margin: 2rem;
-}
+article.homePage, aside.homePage{ margin: 2rem;}
 
 /*index secondaryBox*/
 .secondaryBox{
@@ -48,7 +44,7 @@ footer > div{
 
 }
 
-/*INDEX TEXT FORMATING*/
+/** INDEX TEXT FORMATING **/
 
 /*index article header*/
 #article-header1{
@@ -71,3 +67,55 @@ aside.homePage > p{
 }
 
 
+/** HAMBRUGER MENU **/
+
+#hamburgerMenu{display: none;}
+
+@media (min-width: 701px){
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none; 
+    }
+
+    .menu > li{padding-right: 15rem}
+}
+
+@media (max-width: 700px){
+    .menu{
+        list-style-type: none; 
+        position: sticky;
+        padding-left: 0px;
+    }
+
+    .menuIcon{
+        display: block;
+        background-image: url(images/index.menu.png);
+        background-size: cover;
+        height: 50px;
+        width: 50px;
+    }
+
+    .hamburgerContainer{cursor: pointer;}
+
+    .menu > li{
+        height:0px;
+        overflow: hidden;
+    }
+
+    #hamburgerMenu:checked ~ .menu > li{
+        height: 1rem;
+        width: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        background-color: var(--indexBrown);
+    }
+
+    nav{
+        display: flex;
+        height: 50px;
+    }
+
+}
