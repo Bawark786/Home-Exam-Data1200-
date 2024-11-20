@@ -58,7 +58,7 @@ aside.homePage > p{
 }
 
 
-/** GRID **/
+/** INDEX GRID **/
 @media (max-width: 839px){
     .secondaryBox{
         grid-column: 1/2;
@@ -137,7 +137,7 @@ aside.homePage > p{
 
 }
 
-/** HAMBRUGER MENU **/
+/** INDEX HAMBRUGER MENU **/
 
 #hamburgerMenu{display: none;}
 
