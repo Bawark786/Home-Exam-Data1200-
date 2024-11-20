@@ -119,3 +119,73 @@ aside.homePage > p{
     }
 
 }
+
+/** CSS for git page **/
+
+/* Nav menu */
+
+:root{--git-color:rgb(25, 25, 25)}
+:root{--git-nav-hover:rgb(100, 100, 100)}
+:root{--git-nav-active:rgb(79,79,79)}
+
+body.git {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header.git-menu {
+    background-color: var(--git-color);
+    width: 100%;
+}
+
+nav.git-navigation {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 80rem;
+    height: 3.25rem;
+}
+
+li.git-navigation {
+    width: 100%;
+    height: inherit;
+    transition: 0.3s;
+    border-right: 0.05rem solid white;
+    display: flex;
+    justify-content: center;
+}
+
+li.git-navigation:hover {
+    background-color: var(--git-nav-hover);
+}
+
+li.git-navigation:first-child {
+    border-left: 0.05rem solid white;
+}
+
+/* The current site your one */
+
+li.git-active {
+    background-color: var(--git-nav-active);
+}
+
+li.git-navigation > a {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+div.git-nav-text {
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+    margin: calc((3.25rem - 1.25rem)/2) 0; /* calculate the middle postition */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Article */
+
