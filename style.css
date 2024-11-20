@@ -208,10 +208,15 @@ header.git-menu {
     width: 100%;
 }
 
-nav.git-navigation {
+label.git-menu-button {
+    display: none;
+}
+
+ul.git-navigation-wrapper {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    padding: 0;
     margin: 0 auto;
     width: 80%;
     max-width: 80rem;
@@ -227,12 +232,12 @@ li.git-navigation {
     justify-content: center;
 }
 
-li.git-navigation:hover {
-    background-color: var(--git-nav-hover);
-}
-
 li.git-navigation:first-child {
     border-left: 0.05rem solid white;
+}
+
+li.git-navigation:hover {
+    background-color: var(--git-nav-hover);
 }
 
 /* The current site your one */
@@ -258,10 +263,14 @@ div.git-nav-text {
     font-weight: bold;
 }
 
+#git-menu {
+    display: none;
+}
+
 /* Article */
 
 article.git-article {
-    max-width: 80%;
+    max-width: 85%;
     margin: 3rem auto;
 }
 
@@ -269,9 +278,24 @@ div.git-article {
     margin: 3rem;
 }
 
+div.git-article-body {
+    display: block;
+}
+
+div.git-article-body::after {
+    margin-top: 0.5rem;
+    background: rgba(0, 0, 0, .2);
+    width: 105%;
+    margin-left: -2.5%;
+    content: "";
+    display: block;
+    height: 1px;
+}
+
 ul.git-image-container {
     width: 100%;
     display: flex;
+    justify-content: center;
     list-style: none;
     padding: 0;
 }
@@ -280,6 +304,62 @@ ul.git-image-container > li:first-child {
     margin-right: 1rem;
 }
 
+ul.git-image-container > li {
+    width: calc(50% - 1rem);
+}
+
 img.git-image {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/* For different screen sizes */
+
+@media (max-width: 700px) {
+    nav.git-navigation {
+        display: grid;
+        width: 100%;
+        margin: 0;
+    }
+
+    ul.git-navigation-wrapper {
+        display: none;
+    }
+
+    label.git-menu-button {
+        display: flex;
+        height: 3.25rem;
+        width: 5rem;
+        cursor: pointer;
+        border-right: 0.05rem solid white;
+        align-items: center;
+    }
+    
+    li.git-menu-button {
+        height: 70%;
+        width: 70%;
+        min-width: 2rem;
+        max-width: 2rem;
+        display: grid;
+        align-items: center;
+        margin: auto;
+    }
+
+    li.git-menu-button > span {
+        display: block;
+        height: 0.1rem;
+        width: 100%;
+        background-color: white;
+    }
+
+    #git-menu:checked ~ ul.git-navigation-wrapper {
+        display: grid;
+        margin: 0;
+    }
+
+    #git-menu:checked ~ ul.git-navigation-wrapper > li {
+        opacity: 1;
+        border: 0.05rem solid white;
+        background: var(--git-color);
+    }
 }
