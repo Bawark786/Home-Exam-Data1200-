@@ -8,71 +8,115 @@
     </head>
     <body class="git">
         <header class="git-menu">
-            <nav class="git-navigation">
-                <li class="git-navigation">
-                    <a href="index.html">
-                        <div class="git-nav-text">Home</div>
-                    </a>
-                </li>
-                <li class="git-navigation">
-                    <a href="accessibility.html">
-                        <div class="git-nav-text">Accesibility</div>
-                    </a>
-                </li>
-                <li class="git-navigation">
-                    <a href="activity.html">
-                        <div class="git-nav-text">Activity</div>
-                    </a>
-                </li>
-                <li class="git-navigation git-active">
-                    <a href="github.html">
-                        <div class="git-nav-text">Github</div>
-                    </a>
-                </li>
+            <nav>
+                <input id="git-menu" type="checkbox"></input>
+                <label for="git-menu" class="git-menu-button">
+                        <li class="git-menu-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </li>
+                    </label>
+                <ul class="git-navigation-wrapper">
+                    <li class="git-navigation">
+                        <a href="index.html">
+                            <div class="git-nav-text">Home</div>
+                        </a>
+                    </li>
+                    <li class="git-navigation">
+                        <a href="accessibility.html">
+                            <div class="git-nav-text">Accessibility</div>
+                        </a>
+                    </li>
+                    <li class="git-navigation">
+                        <a href="activity.html">
+                            <div class="git-nav-text">Activity</div>
+                        </a>
+                    </li>
+                    <li class="git-navigation git-active">
+                        <a href="github.html">
+                            <div class="git-nav-text">Github</div>
+                        </a>
+                    </li>
+                </ul>
             </nav>
         </header>
         <main>
             <article class="git-article">
                 <div class="git-article">
-                    <h1>
-                      Using github as a first time user   
-                    </h1>
-                    <p> <!-- Introduction -->
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
-                        ullam deserunt repudiandae at blanditiis velit expedita autem.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
-                        ullam deserunt repudiandae at blanditiis velit expedita autem. 
-                    </p>
-                    <p> <!-- Main body -->
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
-                        ullam deserunt repudiandae at blanditiis velit expedita autem. 
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
-                        ullam deserunt repudiandae at blanditiis velit expedita autem. 
-                    </p>
-                    <ul class="git-image-container">
-                        <li><img src="Images/random_forest.jpeg" class="git-image"></img></li>
-                        <li><img src="Images/random_forest.jpeg" class="git-image"></img></li>
-                    </ul> 
-                    <ul class="git-image-container">
-                        <li><img src="Images/random_forest.jpeg" class="git-image"></img></li>
-                        <li><img src="Images/random_forest.jpeg" class="git-image"></img></li>
-                    </ul> 
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
-                        ullam deserunt repudiandae at blanditiis velit expedita autem. 
-                    </p>
-                    <p> <!-- Conclusion -->
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
-                        ullam deserunt repudiandae at blanditiis velit expedita autem.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
-                        ullam deserunt repudiandae at blanditiis velit expedita autem. 
-                    </p>
+                    <div class="git-article-body">
+                        <!-- Introduction -->
+                        <h1>
+                          Using github as a first time user   
+                        </h1>
+                        <p> 
+                            Github is an online sharing and collaboration tool. 
+                            We knew little of what github did or how it could impact a project. 
+                            In this article we will tell you about our experience with github.
+                        </p>
+                    </div>
+                    <div class="git-article-body">
+                        <!-- Main body -->
+                        <h2>
+                            Trials and tribulations
+                        </h2>
+                        <p> 
+                            Looking at this project was daunting. We had never worked on making a website with other people before. 
+                            Would we be able to make a website without messing up eachothers work? 
+                        </p>
+                        <p>
+                            When we first started using github, it felt a little clunky and rough. 
+                            However, after some time had past we started getting the hang of it. 
+                            It felt easier and easier working with eachother, and our workflow became efficient. 
+                            We did not have to worry about messing up others code. Github solved all those problems for us. 
+                            It was more like a gentle mountain river, rather than the onslaught of the seven seas that we were expecting.
+                        </p>
+                        <ul class="git-image-container">
+                            <li><img alt="A picture of a git commit log" src="Images/Git_commits.png" class="git-image"></img></li>
+                            <li><img src="Images/random_forest.jpeg" class="git-image"></img></li>
+                        </ul> 
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
+                            ullam deserunt repudiandae at blanditiis velit expedita autem. 
+                        </p>
+                        <ul class="git-image-container">
+                            <li><img alt="A picture showing a git commit page" src="Images/Git_file_changes.png" class="git-image"></img></li>
+                            <li><img src="Images/random_forest.jpeg" class="git-image"></img></li>
+                        </ul>
+                        <h3>
+                            Benefits we found using github
+                        </h3>
+                        <ul>
+                            <li>
+                                <p>
+                                    It made collaborating much easier with it.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    With it handling all of the merging of documents, it took most of the worry of deleting or messing up 
+                                    others code out of our heads.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    It made code management fool proof, which helped manage our parts of the project, while also 
+                                    allowing us to see and help everyone else.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="git-article-body">
+                        <!-- Conclusion -->
+                        <h2>
+                            Did we enjoy using github?
+                        </h2>
+                        <p> 
+                            As a first-time user github was at large a wonderful experience. 
+                            While there were some difficulties when starting out, most of them got solved by just fooling around with the repository. 
+                            All in all, github was a huge help for us, and we won't forget that.
+                        </p>
+                    </div>
                 </div>
             </article>
         </main>
