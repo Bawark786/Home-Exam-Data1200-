@@ -374,6 +374,7 @@ img.git-image {
 */
 
 @media (max-width: 750px) {        
+    /** Menu **/
     ul.git-navigation-wrapper {
         background-color: var(--git-color);
         height: fit-content;
@@ -389,7 +390,6 @@ img.git-image {
     }
 
     li.git-navigation:last-child {
-        border-top: 0.05rem solid white;
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
     }
@@ -419,5 +419,18 @@ img.git-image {
 
     #git-menu:checked ~ ul.git-navigation-wrapper {
         display: grid;
+    }
+
+    /** Images **/
+    /* 
+        Switch the display to a grid, so that the images "stack" on top of eachother
+        instead of next to eachother
+    */
+    ul.git-image-container {
+        display: grid;
+    }
+
+    ul.git-image-container > li{
+        width: 100%;
     }
 }
