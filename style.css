@@ -317,9 +317,9 @@ div.git-nav-text {
 /* Article */
 
 article.git-article {
-    max-width: 85%;
+    max-width: 75%;
     margin: 3rem auto;
-    padding-top: 0.5rem;
+    padding: 2rem;
     border-radius: 1rem;
     box-shadow: /* Generated with https://shadows.brumm.af */
         -1.4px -2px 22.8px rgba(0, 0, 0, 0.08),
@@ -331,18 +331,23 @@ article.git-article {
 }
 
 div.git-article {
-    margin: 3rem;
+    max-width: 80%;
+    margin: auto;
 }
 
 div.git-article-body::after {
     margin-top: 0.5rem;
     background: rgba(0, 0, 0, .2);
-    width: 105%;
-    margin-left: -2.5%;
+    width: 115%;
+    margin-left: -7.5%;
     margin-top: 2rem;
     content: "";
     display: block;
     height: 1px;
+}
+
+div.git-article-body:last-child::after {
+    display: none;
 }
 
 ul.git-image-container {
@@ -385,10 +390,15 @@ img.git-image {
         margin: 0;
     }
 
+    li.git-navigation {
+        border-right: 0;
+    }
+    
     li.git-navigation:first-child {
         border-top: 0.05rem solid white;
+        border-left: 0;
     }
-
+    
     li.git-navigation:last-child {
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
