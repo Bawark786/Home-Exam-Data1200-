@@ -194,9 +194,9 @@ aside.homePage > p{
 
 /* Nav menu */
 
-:root{--git-color:rgb(25, 25, 25)}
+:root{--git-color:rgba(0, 0, 0, 1)}
 :root{--git-nav-hover:rgb(100, 100, 100)}
-:root{--git-nav-active:rgb(79,79,79)}
+:root{--git-nav-active:rgba(79,79,79,1)}
 
 body.git {
     font-family: Arial, Helvetica, sans-serif;
@@ -206,6 +206,7 @@ body.git {
 header.git-menu {
     background-color: var(--git-color);
     width: 100%;
+    height: 3.25rem;
 }
 
 label.git-menu-button {
@@ -315,15 +316,23 @@ img.git-image {
 
 /* For different screen sizes */
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
+    header.git-menu > nav {
+        display: grid;
+        width: 10rem;
+        height: auto;
+    }
+
     nav.git-navigation {
         display: grid;
         width: 100%;
         margin: 0;
+        opacity: 2;
     }
 
     ul.git-navigation-wrapper {
         display: none;
+        margin: 0;
     }
 
     label.git-menu-button {
@@ -351,15 +360,16 @@ img.git-image {
         width: 100%;
         background-color: white;
     }
-
+    
     #git-menu:checked ~ ul.git-navigation-wrapper {
+        background-color: var(--git-color);
         display: grid;
-        margin: 0;
+        height: auto;
+        width: fit-content;
     }
 
-    #git-menu:checked ~ ul.git-navigation-wrapper > li {
-        opacity: 1;
-        border: 0.05rem solid white;
+    #git-menu:checked ~ ul.git-navigation-wrapper > li:not(.git-active) {
         background: var(--git-color);
+        border: 0;
     }
 }
