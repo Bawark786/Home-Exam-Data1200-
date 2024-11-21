@@ -12,10 +12,50 @@ body.homePage{
 
 /*index header*/
 header.homePage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     background-color: var(--indexBrown);
     color:rgb(249, 246, 243);
     line-height:1.4rem;
 }
+
+/*index Header h1*/
+#indexHeaderH1{
+    font-size: 24px;
+}
+
+/*index nav*/
+.indexNavbar{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    margin-left: auto; 
+}
+
+.menu > li{
+    margin: 0 15px;
+}
+
+.menu > a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.menu a:hover{
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+
+
 
 /*index article*/
 article.homePage, aside.homePage{ margin: 2rem;}
@@ -139,9 +179,9 @@ aside.homePage > p{
 
 /** INDEX HAMBRUGER MENU **/
 
-#hamburgerMenu{display: none;}
+/*#hamburgerMenu{display: none;}*/
 
-@media (min-width: 701px){
+/*@media (min-width: 701px){
     .menu{
         display: flex;
         flex-direction: row;
@@ -150,7 +190,7 @@ aside.homePage > p{
     }
 
     .menu > li{padding-right: 15rem}
-}
+}*/
 
 @media (max-width: 700px){
     .menu{
