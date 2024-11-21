@@ -246,37 +246,38 @@ body.git {
 header.git-menu {
     background-color: var(--git-color);
     border-bottom: 0.05rem solid white;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    height: 3.25rem;
+    border-radius: 0 0 0.5rem 0.5rem;
     width: 90%;
-    margin: 0 auto;
+    margin: auto;
     position: sticky;
     top: 0;
 }
 
+header.git-menu > nav {
+    height: 4rem; /* Max height for the navigation bar */
+}
+
 label.git-menu-button {
-    display: none;
+    display: none; 
+    /* Doesnt display the menu button when the screen is large enough */
 }
 
 ul.git-navigation-wrapper {
+    height: inherit;
     list-style: none;
     display: flex;
-    justify-content: space-between;
     padding: 0;
-    margin: 0 auto;
+    margin: auto;
     width: 80%;
     max-width: 80rem;
-    height: 3.25rem;
 }
 
 li.git-navigation {
-    width: 100%;
-    height: inherit;
-    transition: 0.3s;
-    border-right: 0.05rem solid white;
+    background-color: var(--git-color);
     display: flex;
-    justify-content: center;
+    height: inherit;
+    width: 100%;
+    border-right: 0.05rem solid white;
 }
 
 li.git-navigation:first-child {
@@ -284,29 +285,26 @@ li.git-navigation:first-child {
 }
 
 li.git-navigation:hover {
+    transition: 0.3s;
     background-color: var(--git-nav-active);
 }
 
 /* The current site your one */
-
 li.git-active {
     background-color: var(--git-nav-active);
 }
 
 li.git-navigation > a {
-    text-decoration: none;
-    display: block;
-    height: 100%;
     width: 100%;
-    position: relative;
+    display: block;
+    align-content: center;
+    text-decoration: none;
 }
 
 div.git-nav-text {
     color: white;
     font-size: 1.25rem;
     text-align: center;
-    margin: calc((3.25rem - 1.25rem)/2) 0; /* calculate the middle postition */
-    text-decoration: none;
     font-weight: bold;
 }
 
@@ -331,7 +329,7 @@ article.git-article {
 }
 
 div.git-article {
-    max-width: 80%;
+    width: 80%;
     margin: auto;
 }
 
@@ -348,12 +346,11 @@ div.git-article-body::after {
 
 div.git-article-body:last-child::after {
     display: none;
+    /* Only cosmetic, removes the last solid line after the article */
 }
 
 ul.git-image-container {
-    width: 100%;
     display: flex;
-    justify-content: center;
     list-style: none;
     padding: 0;
 }
@@ -362,13 +359,8 @@ ul.git-image-container > li:first-child {
     margin-right: 1rem;
 }
 
-ul.git-image-container > li {
-    width: calc(50% - 1rem);
-}
-
-img.git-image {
+ul.git-image-container > li, img.git-image {
     width: 100%;
-    height: auto;
 }
 
 /* For different screen sizes */
@@ -381,54 +373,55 @@ img.git-image {
 @media (max-width: 750px) {        
     /** Menu **/
     ul.git-navigation-wrapper {
-        background-color: var(--git-color);
-        height: fit-content;
         width: fit-content;
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
-        display: none;
+        display: none; /* Disables the top bar */
         margin: 0;
     }
-
+    
+    /* Remove the separation barrier between the navigation buttons */
     li.git-navigation {
         border-right: 0;
     }
-    
+
     li.git-navigation:first-child {
         border-top: 0.05rem solid white;
         border-left: 0;
     }
-    
+
+    /* Round of the bottom of the drop down menu */
     li.git-navigation:last-child {
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
+        border-radius: 0 0 0.5rem 0.5rem;
     }
 
+    /* Make the drop down menu visible */
+    /* Menu button */
     label.git-menu-button {
         border-right: 0.05rem solid white;
         cursor: pointer;
-        height: 3.25rem;
+        height: 100%;
         width: 5rem;
         display: flex;
     }
 
     li.git-menu-button {
-        height: 70%;
+        height: 2rem;
         width: 2rem;
         align-items: center;
         display: grid;
         margin: auto;
     }
 
+    /* Button "icon" */
     li.git-menu-button > span {
         display: block;
         height: 0.1rem;
-        width: 100%;
         background-color: white;
     }
 
     #git-menu:checked ~ ul.git-navigation-wrapper {
-        display: grid;
+        display: grid; /* Makes the navigation bar display as a drop down menu */
     }
 
     /** Images **/
@@ -438,9 +431,5 @@ img.git-image {
     */
     ul.git-image-container {
         display: grid;
-    }
-
-    ul.git-image-container > li{
-        width: 100%;
     }
 }
