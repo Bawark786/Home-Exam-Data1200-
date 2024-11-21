@@ -183,7 +183,7 @@ aside.homePage > p{
         background-color: var(--indexBrown);
     }
 
-    nav{
+    header.homePage > nav{
         display: flex;
         height: 50px;
     }
@@ -192,21 +192,27 @@ aside.homePage > p{
 
 /** CSS for the git page **/
 
-/* Nav menu */
+:root{--git-color:rgb(25, 25, 25)}
+:root{--git-nav-active:rgb(79,79,79)}
 
-:root{--git-color:rgba(0, 0, 0, 1)}
-:root{--git-nav-hover:rgb(100, 100, 100)}
-:root{--git-nav-active:rgba(79,79,79,1)}
+/* Nav menu */
 
 body.git {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
     margin: 0;
 }
 
 header.git-menu {
     background-color: var(--git-color);
-    width: 100%;
+    border-bottom: 0.05rem solid white;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     height: 3.25rem;
+    width: 90%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
 }
 
 label.git-menu-button {
@@ -238,7 +244,7 @@ li.git-navigation:first-child {
 }
 
 li.git-navigation:hover {
-    background-color: var(--git-nav-hover);
+    background-color: var(--git-nav-active);
 }
 
 /* The current site your one */
@@ -273,14 +279,19 @@ div.git-nav-text {
 article.git-article {
     max-width: 85%;
     margin: 3rem auto;
+    padding-top: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: /* Generated with https://shadows.brumm.af */
+        -1.4px -2px 22.8px rgba(0, 0, 0, 0.08),
+        1.5px 2px 30px rgba(0, 0, 0, 0.063),
+        11.5px 15.9px 35.6px rgba(0, 0, 0, 0.058),
+        30px 41.6px 41.9px rgba(0, 0, 0, 0.055),
+        52.9px 73.3px 51.8px rgba(0, 0, 0, 0.05),
+        75px 104px 80px rgba(0, 0, 0, 0.04);
 }
 
 div.git-article {
     margin: 3rem;
-}
-
-div.git-article-body {
-    display: block;
 }
 
 div.git-article-body::after {
@@ -288,6 +299,7 @@ div.git-article-body::after {
     background: rgba(0, 0, 0, .2);
     width: 105%;
     margin-left: -2.5%;
+    margin-top: 2rem;
     content: "";
     display: block;
     height: 1px;
@@ -316,41 +328,45 @@ img.git-image {
 
 /* For different screen sizes */
 
-@media (max-width: 750px) {
-    header.git-menu > nav {
-        display: grid;
-        width: 10rem;
-        height: auto;
-    }
+/*
+    Disables the top bar and adds a drop down menu, to prevent
+    merging of the "links" between each site
+*/
 
-    nav.git-navigation {
-        display: grid;
-        width: 100%;
-        margin: 0;
-        opacity: 2;
-    }
-
+@media (max-width: 750px) {        
     ul.git-navigation-wrapper {
+        background-color: var(--git-color);
+        height: fit-content;
+        width: fit-content;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
         display: none;
         margin: 0;
     }
 
+    li.git-navigation:first-child {
+        border-top: 0.05rem solid white;
+    }
+
+    li.git-navigation:last-child {
+        border-top: 0.05rem solid white;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
     label.git-menu-button {
-        display: flex;
+        border-right: 0.05rem solid white;
+        cursor: pointer;
         height: 3.25rem;
         width: 5rem;
-        cursor: pointer;
-        border-right: 0.05rem solid white;
-        align-items: center;
+        display: flex;
     }
-    
+
     li.git-menu-button {
         height: 70%;
-        width: 70%;
-        min-width: 2rem;
-        max-width: 2rem;
-        display: grid;
+        width: 2rem;
         align-items: center;
+        display: grid;
         margin: auto;
     }
 
@@ -360,16 +376,8 @@ img.git-image {
         width: 100%;
         background-color: white;
     }
-    
-    #git-menu:checked ~ ul.git-navigation-wrapper {
-        background-color: var(--git-color);
-        display: grid;
-        height: auto;
-        width: fit-content;
-    }
 
-    #git-menu:checked ~ ul.git-navigation-wrapper > li:not(.git-active) {
-        background: var(--git-color);
-        border: 0;
+    #git-menu:checked ~ ul.git-navigation-wrapper {
+        display: grid;
     }
 }
