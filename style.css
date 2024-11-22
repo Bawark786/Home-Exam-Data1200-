@@ -2,15 +2,15 @@
 
 :root{--indexBrown:rgb(66, 31, 31);}
 
-/** INDEX SELECTORS **/
+/** BODY **/
 
-/*index body*/
 body.homePage{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*index header*/
+/** HEADER**/
+
 header.homePage{
     display: flex;
     justify-content: space-between;
@@ -21,38 +21,148 @@ header.homePage{
     line-height:1.4rem;
 }
 
-/*index Header h1*/
+/*Header h1*/
 #indexHeaderH1{
     font-size: 24px;
 }
 
-/*index nav*/
+/*nav*/
 .indexNavbar{
+    position: relative;
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
+    justify-content: space-between; /* Space between the menu and the search bar */
+    padding: 0 20px;
 }
 
-.menu{
-    display: flex;
+.indexCheckbox{
+    display: none;
+
+}
+
+.indexMenuButton{
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.indexMenuButton > span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.indexNavList{
+    display: none;
     list-style: none;
-    margin-left: auto; 
+    margin: 0; 
+    padding: 0;
+    background-color: rgb(66, 31, 31);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
 }
 
-.menu > li{
-    margin: 0 15px;
+.indexNavList > li{
+    text-align: center;
+    padding: 10px 0;
 }
 
-.menu > a{
+.indexNavList > li > a{
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 5px 10px;
+
 }
 
-.menu a:hover{
-    background-color: #575757;
-    border-radius: 5px;
+#indexMenu:checked + .indexMenuButton + .indexNavList{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--indexBrown);
+    position: absolute;
+    top: 100%; /*Below the header*/
+    right: 0;
+    width: 100%; /* Full widht */
+    text-align: center;
+    padding: 10px 0;
 }
+
+/* Search text next in nav bar */
+.indexSearch{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px; /* Spacing between menu and search*/
+    order: 1;
+}
+
+/* hover effect for "Search* */
+.indexSearch:hover{
+    color: rgb(226, 226, 226);
+}
+
+
+/* Search form */
+.indexSearchForm{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+
+/* Search input field */
+.indexSearchBar{
+    display: none;
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    padding: 5px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 200px;
+    order: 2;
+}
+
+/* Search button (Go) */
+.indexSearchButton{
+    background-color: white;
+    color: rgb(55, 53, 53);
+    border: none;
+    padding: 3px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    order: 3;
+}
+
+.indexSearchButton:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+/* Show search bar when active */
+#indexSearchToggle:focus ~ .indexSearchBar,
+#indexSearchButtonToggle:focus ~ .indexSearchBar,
+.indexSearchButton:focus ~ .indexSearchBar{
+    display: inline-flex;
+}
+
+#indexSearchToggle:active + .indexSearchBar,
+#indexSearchButtonToggle:active + .indexSearchBar,
+.indexSearchButton:active + .indexSearchBar{
+    display: inline-flex;
+}
+
+
+
+
 
 
 
@@ -177,58 +287,7 @@ aside.homePage > p{
 
 }
 
-/** INDEX HAMBRUGER MENU **/
 
-/*#hamburgerMenu{display: none;}*/
-
-/*@media (min-width: 701px){
-    .menu{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        list-style-type: none; 
-    }
-
-    .menu > li{padding-right: 15rem}
-}*/
-
-@media (max-width: 700px){
-    .menu{
-        list-style-type: none; 
-        position: sticky;
-        padding-left: 0px;
-    }
-
-    .menuIcon{
-        display: block;
-        background-image: url(images/index.menu.png);
-        background-size: cover;
-        height: 50px;
-        width: 50px;
-    }
-
-    .hamburgerContainer{cursor: pointer;}
-
-    .menu > li{
-        height:0px;
-        overflow: hidden;
-    }
-
-    #hamburgerMenu:checked ~ .menu > li{
-        height: 1rem;
-        width: auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 1rem;
-        background-color: var(--indexBrown);
-    }
-
-    header.homePage > nav{
-        display: flex;
-        height: 50px;
-    }
-
-}
 
 /** CSS for the git page **/
 
