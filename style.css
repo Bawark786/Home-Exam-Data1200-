@@ -232,28 +232,30 @@ aside.homePage > p{
 
 /** CSS for the git page **/
 
-:root{--git-color:rgb(25, 25, 25)}
-:root{--git-nav-active:rgb(79,79,79)}
+:root{--git-color:rgb(25, 25, 25);}
+:root{--git-nav-border:white;}
+:root{--git-nav-active:rgba(25,25,25,0.9);}
 
 /* Nav menu */
 
 body.git {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: whitesmoke;
-    margin: 0;
+    background-color: rgb(235, 235, 235);
+    margin: auto;
 }
 
 header.git-menu {
-    background-color: var(--git-color);
-    border-bottom: 0.05rem solid white;
+    background: var(--git-color);
+    border-bottom: 0.05rem solid var(--git-nav-border);
     border-radius: 0 0 0.5rem 0.5rem;
+    padding: 0;
     width: 90%;
     margin: auto;
     position: sticky;
     top: 0;
 }
 
-header.git-menu > nav {
+header.git-menu, header.git-menu > nav {
     height: 4rem; /* Max height for the navigation bar */
 }
 
@@ -270,18 +272,20 @@ ul.git-navigation-wrapper {
     margin: auto;
     width: 80%;
     max-width: 80rem;
+    gap: 0;
 }
 
 li.git-navigation {
-    background-color: var(--git-color);
+    background: var(--git-color);
     display: flex;
     height: inherit;
     width: 100%;
-    border-right: 0.05rem solid white;
+    border-right: 0.05rem solid var(--git-nav-border);
+    border-bottom: 0.05rem solid var(--git-nav-border);
 }
 
 li.git-navigation:first-child {
-    border-left: 0.05rem solid white;
+    border-left: 0.05rem solid var(--git-nav-border);
 }
 
 li.git-navigation:hover {
@@ -299,6 +303,7 @@ li.git-navigation > a {
     display: block;
     align-content: center;
     text-decoration: none;
+    border-radius: 0;
 }
 
 div.git-nav-text {
@@ -315,6 +320,7 @@ div.git-nav-text {
 /* Article */
 
 article.git-article {
+    background-color: whitesmoke;
     max-width: 75%;
     margin: 3rem auto;
     padding: 2rem;
@@ -329,20 +335,24 @@ article.git-article {
 }
 
 div.git-article {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
 div.git-article-body::after {
     margin-top: 0.5rem;
     background: rgba(0, 0, 0, .2);
-    width: 115%;
-    margin-left: -7.5%;
+    width: 110%;
+    margin-left: -5%;
     margin-top: 2rem;
     content: "";
     display: block;
     height: 1px;
 }
+
+div.git-article-body > * {
+    margin: 1rem 0;
+} 
 
 div.git-article-body:last-child::after {
     display: none;
@@ -359,9 +369,83 @@ ul.git-image-container > li:first-child {
     margin-right: 1rem;
 }
 
- HEAD
 img.git-image {
     max-width: 100%;
+}
+
+ul.git-image-container > li, img.git-image {
+    width: 100%;
+}
+
+/* For different screen sizes */
+
+/*
+    Disables the top bar and adds a drop down menu, to prevent
+    merging of the "links" between each site
+*/
+
+@media (max-width: 750px) {        
+    /** Menu **/
+    ul.git-navigation-wrapper {
+        width: fit-content;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        display: none; /* Disables the top bar */
+        margin: 0;
+    }
+    
+    /* Remove the separation barrier between the navigation buttons */
+    li.git-navigation {
+        border-right: 0;
+    }
+
+    li.git-navigation:first-child {
+        border-top: 0.05rem solid var(--git-nav-border);
+        border-left: 0;
+    }
+
+    /* Round of the bottom of the drop down menu */
+    li.git-navigation:last-child {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    /* Make the drop down menu visible */
+    /* Menu button */
+    label.git-menu-button {
+        border-right: 0.05rem solid var(--git-nav-border);
+        cursor: pointer;
+        height: 100%;
+        width: 5rem;
+        display: flex;
+    }
+
+    li.git-menu-button {
+        height: 2rem;
+        width: 2rem;
+        align-items: center;
+        display: grid;
+        margin: auto;
+    }
+
+    /* Button "icon" */
+    li.git-menu-button > span {
+        display: block;
+        height: 0.1rem;
+        background-color: var(--git-nav-border);
+    }
+
+    #git-menu:checked ~ ul.git-navigation-wrapper {
+        display: grid; /* Makes the navigation bar display as a drop down menu */
+    }
+
+    /** Images **/
+    /* 
+        Switch the display to a grid, so that the images "stack" on top of eachother
+        instead of next to eachother
+    */
+    ul.git-image-container {
+        display: grid;
+    }
 }
 
 /** CSS for the activity.html  **/
@@ -509,78 +593,3 @@ footer {
     margin-top: 20px;
     font-size: 0.9rem;
 }
-ul.git-image-container > li, img.git-image {
-    width: 100%;
-}
-
-/* For different screen sizes */
-
-/*
-    Disables the top bar and adds a drop down menu, to prevent
-    merging of the "links" between each site
-*/
-
-@media (max-width: 750px) {        
-    /** Menu **/
-    ul.git-navigation-wrapper {
-        width: fit-content;
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-        display: none; /* Disables the top bar */
-        margin: 0;
-    }
-    
-    /* Remove the separation barrier between the navigation buttons */
-    li.git-navigation {
-        border-right: 0;
-    }
-
-    li.git-navigation:first-child {
-        border-top: 0.05rem solid white;
-        border-left: 0;
-    }
-
-    /* Round of the bottom of the drop down menu */
-    li.git-navigation:last-child {
-        border-radius: 0 0 0.5rem 0.5rem;
-    }
-
-    /* Make the drop down menu visible */
-    /* Menu button */
-    label.git-menu-button {
-        border-right: 0.05rem solid white;
-        cursor: pointer;
-        height: 100%;
-        width: 5rem;
-        display: flex;
-    }
-
-    li.git-menu-button {
-        height: 2rem;
-        width: 2rem;
-        align-items: center;
-        display: grid;
-        margin: auto;
-    }
-
-    /* Button "icon" */
-    li.git-menu-button > span {
-        display: block;
-        height: 0.1rem;
-        background-color: white;
-    }
-
-    #git-menu:checked ~ ul.git-navigation-wrapper {
-        display: grid; /* Makes the navigation bar display as a drop down menu */
-    }
-
-    /** Images **/
-    /* 
-        Switch the display to a grid, so that the images "stack" on top of eachother
-        instead of next to eachother
-    */
-    ul.git-image-container {
-        display: grid;
-    }
-}
-
