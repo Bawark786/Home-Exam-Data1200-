@@ -34,12 +34,9 @@ header.homePage{
     align-items: center;
     justify-content: space-between; /* Space between the menu and the search bar */
     padding: 0 20px;
+    height: 60px;
 }
 
-.indexCheckbox{
-    display: none;
-
-}
 
 .indexMenuButton{
     display: inline-block;
@@ -100,6 +97,9 @@ header.homePage{
     font-size: 18px;
     cursor: pointer;
     margin-left: 10px; /* Spacing between menu and search*/
+    padding: 0;
+    line-height: 45px; 
+    height: 40px;
     order: 1;
 }
 
@@ -114,7 +114,7 @@ header.homePage{
     display: flex;
     align-items: center;
     gap: 10px;
-
+    justify-content: flex-start;
 }
 
 
@@ -123,42 +123,41 @@ header.homePage{
     display: none;
     background-color: white;
     color: black;
-    font-size: 10px;
+    font-size: 14px;
     padding: 5px;
     border: 1px solid rgb(200, 200, 200);
     border-radius: 5px;
-    margin-right: 5px;
-    width: 200px;
+    width: 100px;
+    height: 20px;
     order: 2;
 }
 
-/* Search button (Go) */
+/* Search button (search icon) */
 .indexSearchButton{
-    background-color: white;
-    color: rgb(55, 53, 53);
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
     border: none;
-    padding: 3px 5px;
-    border-radius: 5px;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
     order: 3;
 }
 
+
 .indexSearchButton:hover{
-    background-color: rgb(226, 226, 226);
+    color: rgb(226, 226, 226);
 }
 
 /* Show search bar when active */
 #indexSearchToggle:focus ~ .indexSearchBar,
-#indexSearchButtonToggle:focus ~ .indexSearchBar,
-.indexSearchButton:focus ~ .indexSearchBar{
+#indexSearchToggle:active ~ .indexSearchBar,
+#indexSearchButtonIcon:focus ~ .indexSearchBar,
+#indexSearchButtonIcon:active ~ .indexSearchBar{
     display: inline-flex;
 }
 
-#indexSearchToggle:active + .indexSearchBar,
-#indexSearchButtonToggle:active + .indexSearchBar,
-.indexSearchButton:active + .indexSearchBar{
-    display: inline-flex;
-}
+
 
 
 
