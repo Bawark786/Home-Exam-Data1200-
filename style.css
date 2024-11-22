@@ -581,7 +581,6 @@ main {
     font-size: 1.2rem;
 }
 
-/* Gallery Section */
 #images {
     margin-bottom: 30px;
 }
@@ -592,22 +591,29 @@ main {
     color: #0077b6;
 }
 
+/* Photo Gallery Section */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .gallery img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
 }
+
+
 
 /* Resources Section */
 #resources {
