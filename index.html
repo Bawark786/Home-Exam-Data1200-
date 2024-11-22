@@ -14,24 +14,36 @@
         <h1 id="indexHeaderH1">OSLO MET</h1>
 
         <nav class="indexNavbar"> 
-            <input id="hamburgerMenu" type="checkbox" aria-label="Toggle navigation">
+            <input type="checkbox" id="indexMenu" class="indexCheckbox"  aria-label="Toggle navigation">
 
-            <label class="hamburgerContainer" for="hamburgerMenu">
-                <li class="indexHamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </li>
 
-              <!-- <div class="menuIcon"></div> --> 
+            <!-- Hamburger menu -->
+            <label for="indexMenu" class="indexMenuButton">
+                <span></span>
+                <span></span>
+                <span></span>
             </label>
 
-            <ul class="menu">
-                <li><a href="index.html"></a></li>
-                <li><a href="github.html"></a></li>
-                <li><a href="accessibility.html"></a></li>
-                <li><a href="activity.html"></a></li>
+            <!-- Navigation list -->
+            <ul class="indexNavList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="github.html">GitHub</a></li>
+                <li><a href="accessibility.html">Accessibility</a></li>
+                <li><a href="activity.html">Activity</a></li>
             </ul>
+
+
+             <!-- Search form -->
+             <form class="indexSearchForm" action="#" method="get">
+
+                <!-- Search button (visable by default)-->
+                <button class="indexSearch" id="indexSearchToggle">Search</button>
+
+                <!-- Search bar (initially hidden) -->
+                <button type="submit" class="indexSearchButton">Go</button>
+                <input type="text" id="indexSearchBarNav" class="indexSearchBar" placehoder="Search...">
+                   
+             </form>
 
         </nav>
     </header>
