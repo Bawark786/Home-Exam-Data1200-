@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="description" content="An insight into how it is working with
+        github for the first time.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
+        <script src="scripts/menu-button.js"></script>
     </head>
     <body class="git">
         <header class="git-menu">
             <nav>
-                <input id="git-menu" type="checkbox"></input>
-                <label for="git-menu" class="git-menu-button">
-                        <li class="git-menu-button">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </li>
-                    </label>
-                <ul class="git-navigation-wrapper">
+                <button class="git-menu-button" onclick="dropDownButtton()" tabindex="0">
+                    <div class="git-menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <ul class="git-navigation-wrapper" id="navigation-menu">
                     <li class="git-navigation">
                         <a href="index.html">
                             <div class="git-nav-text">Home</div>
@@ -72,16 +74,16 @@
                             It was more like a gentle mountain river, rather than the onslaught of the seven seas that we were expecting.
                         </p>
                         <ul class="git-image-container">
-                            <li><img alt="A picture of a git commit log" src="Images/Git_commits.png" class="git-image"></img></li>
-                            <li><img src="Images/random_forest.jpeg" class="git-image"></img></li>
+                            <li><img alt="A picture of a git commit log, showing what documents were changed" src="Images/Git_commits.png" class="git-image"></img></li>
+                            <li><img alt="Another example of a git commit log" src="Images/Git_commits_2.png" class="git-image"></img></li>
                         </ul> 
                         <p>
                             In the pictures above you can see the commit history of our project, 
                             it allows us to see who changed what and played a big part in making this project less cumbersome.
                         </p>
                         <ul class="git-image-container">
-                            <li><img alt="A picture showing a git commit page" src="Images/Git_file_changes.png" class="git-image"></img></li>
-                            <li><img src="Images/random_forest.jpeg" class="git-image"></img></li>
+                            <li><img alt="A picture showing a git commit page, showing the changes that were made" src="Images/Git_file_changes.png" class="git-image"></img></li>
+                            <li><img alt="Another example of a git commit page" src="Images/Git_file_changes_2.png" class="git-image"></img></li>
                         </ul>
                         <h3>
                             Benefits we found using github
