@@ -258,6 +258,12 @@ header.homePage{
     list-style: none;
     margin: auto;
     flex-wrap: wrap;
+    margin-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.indexTable td{
     display: flex;
     justify-content: start;
     align-content: center;
@@ -315,8 +321,9 @@ header.homePage{
 
 /* DROPDOWN MENU */
 #indexDropdownParagraph{
-    font-size: 25px;
-    padding: 10px;
+    font-size: 23px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 15px;
     padding-left: 400px;
     padding-right: 400px;
     border-top: 2px solid rgb(216, 216, 216);
@@ -327,22 +334,30 @@ header.homePage{
     display: inline-block;
 }
 
-.dropDown button{
-    background-color: rgb(72, 72, 72);
-    color: white;
+.dropdownButton{
+    background-color: transparent;
+    color: rgb(0, 0, 0);
     padding: 10px 15px;
     border: none;
     cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 35px;
 }
 
-.dropDown a{
-    display: block;
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px;
+.plusSign{
+    font-size: 30px;
+    font-weight: bold;
 }
 
-.dropDown .content{
+.dropdownLabel{
+    font-size: 18x;
+    font-weight: bold;
+}
+
+.indexDropdownContent{
     display: none;
     position: absolute;
     background-color: rgb(186, 181, 181);
@@ -350,15 +365,19 @@ header.homePage{
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.925);
 }
 
-.dropDown:hover .content{
+
+.indexDropdown input[type="checkbox"]:checked +  .dropdownButton + .indexDropdownContent{
     display: block;
 }
 
-.dropDown:hover button{
-    background-color: gray;
+.indexDropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
 }
 
-.dropDown a:hover{
+.indexDropdown a:hover{
     background-color: rgb(65, 8, 65);
     color: white;
 }
@@ -623,52 +642,52 @@ ul.git-image-container > li, img.git-image {
 
 /** CSS for the activity.html  **/
 /* General Reset */
-* {
+/* Header */
+body.activity {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f8fb; /* Light sky blue background */
-    padding: 0;
-    margin: 0;
-}
-
-/* Header and Navigation */
 header {
-    background-color: #0077b6; /* Deep blue */
+    background-color: rgb(6, 25, 52); /* Deep blue */
     color: white;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for narrow screens */
 }
 
+/* Navigation Menu */
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 20px;
-}
-
-header nav ul li {
-    display: inline;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 8px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    background-color: #023e8a; /* Darker blue */
+    background-color: #023e8a; /* Darker blue hover effect */
 }
+
+/* Responsive Navigation for Mobile */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Stack links on small screens */
+        align-items: center;
+    }
+}
+
 
 /* Main Section */
 main {
@@ -759,21 +778,54 @@ main {
     transform: translateY(0);
 }
 
+/* For Ultra-Wide Screens (21:9) */
+@media (min-width: 1600px) {
+    main {
+        padding: 30px 40px;
+        max-width: 1600px; /* Adjust max width for ultra-wide screens */
+    }
 
+    .gallery {
+        gap: 20px; /* Increase spacing for larger screens */
+    }
+
+    .hover-text {
+        font-size: 1.2rem; /* Increase text size for readability */
+    }
+}
+
+/* For Regular Screens (16:9) */
+@media (max-width: 1200px) {
+    main {
+        padding: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Slightly smaller columns */
+    }
+}
+
+/* For Narrow Screens (Mobile, Portrait) */
 @media (max-width: 768px) {
-    .gallery img {
-        height: 120px; /* Smaller height for smaller screens */
+    main {
+        padding: 15px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
+    }
+
+    .hover-text {
+        font-size: 0.9rem; /* Adjust text size for smaller screens */
     }
 }
 
+/* For Very Small Screens (480px and below) */
 @media (max-width: 480px) {
-    .gallery img {
-        height: 100px; /* Smaller height for very small screens */
+    .gallery {
+        grid-template-columns: 1fr; /* Single column for small devices */
     }
 }
-
-
-
 
 
 /* Resources Section */
@@ -811,11 +863,29 @@ main {
 }
 
 /* Footer */
+/* Footer */
 footer {
-    background-color: #0077b6;
+    background-color: rgb(6, 25, 52);
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    font-size: 0.9rem;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /*https://www.w3schools.com/cssref/css3_pr_flex-wrap.php: Flex-wrap*/
+    flex-wrap: wrap;
+}
+
+footer div {
+    margin: 10px;
+    /* footer sections gets equally distributed */
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+ /* Flex direction source: https://www.w3schools.com/cssref/css3_pr_flex-direction.php*/
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
 }
