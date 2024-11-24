@@ -5,13 +5,9 @@
 /** BODY **/
 
 body.homePage{
-    margin: ;
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100vh;
-
+    margin: 0;
+    padding: 0;
 }
 
 /** HEADER**/
@@ -22,20 +18,22 @@ header.homePage{
     justify-content: space-between;
     align-items: center; 
     background-color: var(--indexBrown);
-    padding: 5px;
+    padding: 20px 15px;
+    padding-bottom: 15px;
     width: 100%;
 }
 
 .indexHeaderCon{
+    max-width: 1200px;
+    padding-left: 200px;
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
-    margin-bottom: 5px;
+    margin: 0;
 }
 
 /*Header h1*/
 #indexHeaderH1{
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 5px;
 }
 
@@ -70,6 +68,7 @@ header.homePage{
     justify-content: flex-end; /* Space between the menu and the search bar */
     margin-left: auto;
     margin-top: -45px; 
+    padding-right: 200px;
 }
 
 .indexCheckbox{
@@ -242,32 +241,52 @@ header.homePage{
 
 
 
+
+
 /*index Table*/
+.indexTableContainer{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .indexTableText{
+    font-size: 20px;
+    margin: 0;
+    padding-left: 200px;
+    padding-right: 200px;
 
 }
 
 .indexTable{ 
-    border-collapse: collapse;
-    margin-top: 15;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .indexTable td{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 15px;
     border-top: 1px solid #1a1919;
     height: 100px;
     box-sizing: border-box;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    width: 40%;
 }
 
 .indexTable .row{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 8px;
 }
 
 
@@ -283,17 +302,65 @@ header.homePage{
     flex-grow: 1;
 }
 
+.indexTableText h1{
+    font-size: 40px;
+}
 
 
 
 
 /* DROPDOWN MENU */
 #indexDropdownParagraph{
-    font-size: 17px;
+    font-size: 25px;
     padding: 10px;
-    border-top: 1px solid rgb(216, 216, 216);
-    border-bottom: 1px solid rgb(216, 216, 216); 
+    padding-left: 400px;
+    padding-right: 400px;
+    border-top: 2px solid rgb(216, 216, 216);
+    border-bottom: 2px solid rgb(216, 216, 216); 
 }
+
+
+
+.dropDown{
+    display: inline-block;
+}
+
+.dropDown button{
+    background-color: rgb(72, 72, 72);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropDown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.dropDown .content{
+    display: none;
+    position: absolute;
+    background-color: rgb(186, 181, 181);
+    min-width: 200px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.925);
+}
+
+.dropDown:hover .content{
+    display: block;
+}
+
+.dropDown:hover button{
+    background-color: gray;
+}
+
+.dropDown a:hover{
+    background-color: rgb(65, 8, 65);
+    color: white;
+}
+
 
 
 
