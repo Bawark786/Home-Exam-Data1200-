@@ -346,8 +346,7 @@ li.git-navigation:first-child {
     border-left: 0.05rem solid var(--git-nav-border);
 }
 
-
-/* The current site your one */
+/* The current site youre one */
 li.git-active {
     background-color: var(--git-nav-active);
 }
@@ -394,7 +393,7 @@ div.git-article {
     margin: auto;
 }
 
-div.git-article-body::after {
+section.git-article-body::after {
     margin-top: 0.5rem;
     background: rgba(0, 0, 0, .2);
     width: 110%;
@@ -405,11 +404,11 @@ div.git-article-body::after {
     height: 1px;
 }
 
-div.git-article-body > * {
+section.git-article-body > * {
     margin: 1rem 0;
 } 
 
-div.git-article-body:last-child::after {
+section.git-article-body:last-child::after {
     display: none;
     /* Only cosmetic, removes the last solid line after the article */
 }
@@ -443,7 +442,7 @@ ul.git-image-container > li, img.git-image {
     /** Menu **/
     ul.git-navigation-wrapper {
         display: grid; /* Makes the navigation bar display as a drop down menu */
-        visibility: hidden;
+        visibility: hidden; /* Hides the menu until the button is pressed */
         width: fit-content;
         margin: 0;
     }
@@ -463,8 +462,8 @@ ul.git-image-container > li, img.git-image {
         border-radius: 0 0 0.5rem 0.5rem;
     }
 
-    /* Make the drop down menu visible */
     /* Menu button */
+    /* Make the drop down menu visible */
     button.git-menu-button {
         background-color: var(--git-color);
         border: solid var(--git-nav-border);
