@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="description" content="An insight into how it is working with
+        github for the first time.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
+        <script src="scripts/menu-button.js"></script>
     </head>
     <body class="git">
         <header class="git-menu">
             <nav>
-                <input id="git-menu" type="checkbox"></input>
-                <label for="git-menu" class="git-menu-button">
-                        <li class="git-menu-button">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </li>
-                    </label>
-                <ul class="git-navigation-wrapper">
-                    <li class="git-navigation">
-                        <a href="index.html">
+                <button class="git-menu-button" onclick="dropDownButtton()" aria-expanded="false"
+                aria-controls="navigation-menu" aria-label="Open navigation menu">
+                    <div class="git-menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <ul class="git-navigation-wrapper" id="navigation-menu" role="menubar">
+                    <li class="git-navigation" role="none">
+                        <a href="index.html" role="menuitem">
                             <div class="git-nav-text">Home</div>
                         </a>
                     </li>
-                    <li class="git-navigation">
-                        <a href="accessibility.html">
+                    <li class="git-navigation" role="none">
+                        <a href="accessibility.html" role="menuitem">
                             <div class="git-nav-text">Accessibility</div>
                         </a>
                     </li>
-                    <li class="git-navigation">
-                        <a href="activity.html">
+                    <li class="git-navigation" role="none">
+                        <a href="activity.html" role="menuitem">
                             <div class="git-nav-text">Activity</div>
                         </a>
                     </li>
-                    <li class="git-navigation git-active">
-                        <a href="github.html">
+                    <li class="git-navigation git-active" role="none">
+                        <a href="github.html" role="menuitem">
                             <div class="git-nav-text">Github</div>
                         </a>
                     </li>
@@ -44,7 +47,7 @@
         <main>
             <article class="git-article">
                 <div class="git-article">
-                    <div class="git-article-body">
+                    <section class="git-article-body">
                         <!-- Introduction -->
                         <h1>
                           Using github as a first time user   
@@ -54,8 +57,8 @@
                             We knew little of what github did or how it could impact a project. 
                             In this article we will tell you about our experience with github.
                         </p>
-                    </div>
-                    <div class="git-article-body">
+                    </section>
+                    <section class="git-article-body">
                         <!-- Main body -->
                         <h2>
                             Trials and tribulations
@@ -72,16 +75,16 @@
                             It was more like a gentle mountain river, rather than the onslaught of the seven seas that we were expecting.
                         </p>
                         <ul class="git-image-container">
-                            <li><img alt="A picture of a git commit log" src="Images/Git_commits.png" class="git-image"></img></li>
-                            <li><img src="Images/random_forest.jpeg" class="git-image"></img></li>
+                            <li><img alt="A picture of a git commit log, showing what documents were changed" src="Images/Git_commits.png" class="git-image"></img></li>
+                            <li><img alt="Another example of a git commit log" src="Images/Git_commits_2.png" class="git-image"></img></li>
                         </ul> 
                         <p>
                             In the pictures above you can see the commit history of our project, 
                             it allows us to see who changed what and played a big part in making this project less cumbersome.
                         </p>
                         <ul class="git-image-container">
-                            <li><img alt="A picture showing a git commit page" src="Images/Git_file_changes.png" class="git-image"></img></li>
-                            <li><img src="Images/random_forest.jpeg" class="git-image"></img></li>
+                            <li><img alt="A picture showing a git commit page, showing the changes that were made" src="Images/Git_file_changes.png" class="git-image"></img></li>
+                            <li><img alt="Another example of a git commit page" src="Images/Git_file_changes_2.png" class="git-image"></img></li>
                         </ul>
                         <h3>
                             Benefits we found using github
@@ -105,8 +108,8 @@
                                 </p>
                             </li>
                         </ul>
-                    </div>
-                    <div class="git-article-body">
+                    </section>
+                    <section class="git-article-body">
                         <!-- Conclusion -->
                         <h2>
                             Did we enjoy using github?
@@ -116,7 +119,7 @@
                             While there were some difficulties when starting out, most of them got solved by just fooling around with the repository. 
                             All in all, github was a huge help for us, and we won't forget that.
                         </p>
-                    </div>
+                    </section>
                 </div>
             </article>
         </main>
