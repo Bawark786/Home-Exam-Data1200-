@@ -1,106 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="An article describing what ">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts/menu-button.js"></script>
 </head>
 
+<!-- 
+<h1 id="indexHeaderH1">OSLO MET</h1> 
+<form class="indexSearchForm" action="#" method="get">
+
+            <button class="indexSearch" id="indexSearchToggle">Search</button>
+
+            <button type="submit" class="indexSearchButton" id="indexSearchButtonIcon">&#x2315;</button> <!-- Search icon taken from: https://github.com/helloSystem/Menu/issues/157 -->
+<!--             <input type="text" id="indexSearchBarNav" class="indexSearchBar" placeholder="Search...">
+        </form>
+-->
+
 <body class="homePage">
-
-    <header class="homePage">
-        <div class="indexHeaderCon">
-            <h1 id="indexHeaderH1">OSLO MET</h1>
-
-            <!-- Link under h1 -->
-            <a href="https://example.com" id="indexOsloMetLink" target="_blank">Example</a>
-        </div>
-
-        <nav class="indexNavbar"> 
-            <input type="checkbox" id="indexMenu" class="indexCheckbox"  aria-label="Toggle navigation">
-
-            <!-- Hamburger menu -->
-            <label for="indexMenu" class="indexMenuButton">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <!-- Navigation list -->
-            <ul class="indexNavList">
-                <label for="indexMenu" class="indexMenuClose" aria-label="Close menu">✕</label>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="github.html">GitHub</a></li>
-                <li><a href="accessibility.html">Accessibility</a></li>
-                <li><a href="activity.html">Activity</a></li>
-             </ul>
-
-            
-
-
-            <!-- Search form -->
-            <form class="indexSearchForm" action="#" method="get">
-
-                <!-- Search button (visable by default)-->
-                <button class="indexSearch" id="indexSearchToggle">Search</button>
-
-                <!-- Search bar (initially hidden) -->
-                <button type="submit" class="indexSearchButton" id="indexSearchButtonIcon">&#x2315;</button> <!-- Search icon taken from: https://github.com/helloSystem/Menu/issues/157 -->
-                <input type="text" id="indexSearchBarNav" class="indexSearchBar" placeholder="Search...">
-            </form>
+    <header class="git-menu">
+        <nav>
+            <button class="git-menu-button" onclick="dropDownButtton()" aria-expanded="false"
+            aria-controls="navigation-menu" aria-label="Open navigation menu">
+                <div class="git-menu-button" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <ul class="git-navigation-wrapper" id="navigation-menu" role="menubar">
+                <li class="git-navigation  git-active" role="none">
+                    <a href="index.html" role="menuitem">
+                        <div class="git-nav-text">Home</div>
+                    </a>
+                </li>
+                <li class="git-navigation" role="none">
+                    <a href="accessibility.html" role="menuitem">
+                        <div class="git-nav-text">Accessibility</div>
+                    </a>
+                </li>
+                <li class="git-navigation" role="none">
+                    <a href="activity.html" role="menuitem">
+                        <div class="git-nav-text">Activity</div>
+                    </a>
+                </li>
+                <li class="git-navigation" role="none">
+                    <a href="github.html" role="menuitem">
+                        <div class="git-nav-text">Github</div>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
-
-
-    <!-- TABLE -->
-    <main class="indexMain">
-        <article class="indexTableText">
-            <h1>Mathematical Modeling and Computer Science - Engineering</h1>
+    <main class="index">
+        <article class="content-table">
+            <h1 class="bold">Mathematical Modeling and Computer Science - Engineering</h1>
             <p>Bachelor's Program</p>
             <br>
 
-            <table class="indexTable">
-                <tr class="row">
-                    <td>
-                        <strong>Loaction</strong>
-                        <span>Pilestredet i Oslo</span>
-                    </td>
-
-                    <td>
-                        <strong>Duration</strong>
-                        <span>3 years</span>
-                    </td>
-
-                    <td>
-                        <strong>Extent</strong>
-                        <span>Full-time</span>
-                    </td>
-                    
-                    <td>
-                        <strong>Credits</strong>
-                        <span>180</span>
-                    </td>
-                </tr>
-
-                <tr class="row">
-                    <td>
-                        <strong>Start of Study</strong>
-                        <span>August</span>   
-                    </td>
-                
-                    <td>
-                        <strong>Language of Instruction</strong>
-                        <span>Norwegian</span>
-                        <span>English</span>
-                    </td>
-                        
-                    <td>
-                        <strong>Study Places</strong>
-                        <span>40</span>
-                    </td>
-                </tr>
-            </table>
+            <ul class="table">
+                <li class="table-item top-border">
+                    <p>
+                        <span class="bold">Location</span><br>Pilestredet i Oslo
+                    </p>
+                </li>
+                <li class="table-item top-border">
+                    <p>
+                        <span class="bold">Duration</span><br>3 years
+                    </p>
+                </li>
+                <li class="table-item top-border">
+                    <p>
+                        <span class="bold">Extent</span><br>Full-time
+                    </p>
+                </li>
+                <li class="table-item top-border">
+                    <p>
+                        <span class="bold">Credits</span><br>180
+                    </p>
+                </li>
+            </ul>
+            <ul class="table">
+                <li class="table-item top-border">
+                    <p>
+                        <span class="bold">Start of Study</span><br>August
+                    </p>   
+                </li>
+                <li class="table-item top-border">
+                    <p>
+                        <span class="bold">Language of Instruction</span><br>Norwegian<br>English
+                    </p>
+                </li>
+                <li class="table-item top-border">
+                    <p>
+                        <span class="bold">Study Places</span><br>40
+                    </p>
+                </li>
+            </ul>
             <br>
         </article>
 
