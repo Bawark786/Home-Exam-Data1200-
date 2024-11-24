@@ -6,7 +6,7 @@
     <title>Activity Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="activity">
     <header>
         <nav>
             <ul>
@@ -18,12 +18,12 @@
         </nav>
     </header>
     <main>
-        <section id="intro">
+        <section class="intro">
             <h1>Explore Hiking Adventures in Norway</h1>
             <p>Hiking in Norway brings peace, a sense of connection to nature, and stunning views. From towering mountains to serene fjords, there’s an adventure for everyone.</p>
         </section>
 
-        <section id="benefits">
+        <section class="benefits">
             <h2>Why Go Hiking?</h2>
             <ul>
                 <li>Hiking provides a break from the digital world.</li>
@@ -33,22 +33,35 @@
             </ul>
         </section>
 
-        <section id="images">
-            <h2>Photo Gallery</h2>
+        <section class="images">
+            <h2> Here are some inspiring landscapes</h2>
             <p>Here are some of the most attractive views you can experience while hiking in Norway:</p>
             <div class="gallery">
-                <!--https://ut.no/turforslag/115028/romsdalseggen source for image under  -->
-                <img src="Images/Romsdalseggen.jpg" alt="A hiker sitting on a rocky peak">
-                <!--https://ut.no/turforslag/1111875/preikestolen source for image under-->
-                <img src="/Images/Preikestolen.jpg" alt="Tourists on a cliff overlooking a fjord">
-                <!--https://no.trolltunga.com/i-ar-er-sommeren-du-bor-ga-til-trolltunga/ source for image under-->
-                <img src="/Images/Trolltung.jpg" alt="A person standing on Trolltunga">
-                <!--https://ut.no/turforslag/114842/klassikeren-over-besseggen source for image under-->
-                <img src="/Images/Besseggen.jpg" alt="Hikers overlooking a turquoise lake">
+                <!-- Image 1 -->
+                <div class="gallery-item">
+                    <img src="Images/Romsdalseggen.jpg" alt="A hiker sitting on a rocky peak">
+                    <div class="hover-text">Romsdalseggen - A breathtaking peak</div>
+                </div>
+                <!-- Image 2 -->
+                <div class="gallery-item">
+                    <img src="/Images/Preikestolen.jpg" alt="Tourists on a cliff overlooking a fjord">
+                    <div class="hover-text">Preikestolen - A famous cliff</div>
+                </div>
+                <!-- Image 3 -->
+                <div class="gallery-item">
+                    <img src="/Images/Trolltung.jpg" alt="A person standing on Trolltunga">
+                    <div class="hover-text">Trolltunga - An amazing rock formation</div>
+                </div>
+                <!-- Image 4 -->
+                <div class="gallery-item">
+                    <img src="/Images/Besseggen.jpg" alt="Hikers overlooking a turquoise lake">
+                    <div class="hover-text">Besseggen - Looking over beatiful blue lakes</div>
+                </div>
             </div>
+            
         </section>
 
-        <section id="destinations">
+        <section class="destinations">
             <h2>Top Hiking Destinations in Norway</h2>
             <p>Norway is home to countless trails, but here are some of the most popular ones:</p>
             <ol>
@@ -61,7 +74,7 @@
             </ol>
         </section>
 
-        <section id="tips">
+        <section class="tips">
             <h2>Significant Tips for Hikers</h2>
             <p>Here are some tips to make your hiking adventures safe and enjoyable:</p>
             <ul>
@@ -72,7 +85,7 @@
             </ul>
         </section>
 
-        <section id="resources">
+        <section class="resources">
             <h2>Resources and Further Reading</h2>
             <p>Plan your hiking adventures in Norway with these useful resources:</p>
             <ul>
@@ -86,7 +99,22 @@
         </section>
     </main>
     <footer>
-        <p>&copy; All Rights Reserved.</p>
+        <div class="footerLeft">
+            <p>Contact</p>
+        </div>
+
+        <div class="footerMiddle">
+            <p>About us</p>
+        </div>
+
+        <div class="footerRight">
+            <p>
+                Address <br>
+                Thomensens gate 45<br>
+                Oslo 
+            </p>
+        </div>
+
     </footer>
 </body>
 </html>
