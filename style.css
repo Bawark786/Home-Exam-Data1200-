@@ -507,7 +507,7 @@ article.git-article {
         75px 104px 80px rgba(0, 0, 0, 0.04);
 }
 
-div.git-article {
+section.git-article-body {
     width: 90%;
     margin: auto;
 }
@@ -526,6 +526,14 @@ section.git-article-body::after {
 section.git-article-body > * {
     margin: 1rem 0;
 } 
+
+section.git-article-body > h1 {
+    font-size: 2rem;
+}
+
+section.git-article-body > h2 {
+    font-size: 1.5rem;
+}
 
 section.git-article-body:last-child::after {
     display: none;
