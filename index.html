@@ -11,10 +11,16 @@
 </div>
 <body class="homePage">
     <header class="homePage">
-        <h1 id="indexHeaderH1">OSLO MET</h1>
+        <div class="indexHeaderCon">
+
+            <h1 id="indexHeaderH1">OSLO MET</h1>
+            <!-- Link under h1 -->
+            <a href="https://example.com" id="indexOsloMetLink" target="_blank">Example</a>
+       
+        </div>
 
         <nav class="indexNavbar"> 
-           
+            <input type="checkbox" id="indexMenu" class="indexCheckbox"  aria-label="Toggle navigation">
 
 
             <!-- Hamburger menu -->
@@ -26,11 +32,15 @@
 
             <!-- Navigation list -->
             <ul class="indexNavList">
+                <label for="indexMenu" class="indexMenuClose" aria-label="Close menu">✕</label>
+
                 <li><a href="index.html">Home</a></li>
                 <li><a href="github.html">GitHub</a></li>
                 <li><a href="accessibility.html">Accessibility</a></li>
                 <li><a href="activity.html">Activity</a></li>
             </ul>
+
+        
 
 
              <!-- Search form -->
@@ -41,48 +51,79 @@
 
                 <!-- Search bar (initially hidden) -->
                 <button type="submit" class="indexSearchButton" id="indexSearchButtonIcon">&#x2315;</button> <!-- Search icon taken from: https://github.com/helloSystem/Menu/issues/157 -->
-                <input type="text" id="indexSearchBarNav" class="indexSearchBar" placehoder="Search...">
+                <input type="text" id="indexSearchBarNav" class="indexSearchBar" placeholder="Search...">
                    
              </form>
 
         </nav>
     </header>
 
-    <main class="indexGridContainer">
+    <main class="indexMain">
 
-        <article class="homePage">
-            <div class="mainBox">
-                <h1 id="article-header1">Page title</h1>
+        <article class="indexTableText">
+            <h1>Mathematical Modeling and Computer Science - Engineering</h1>
+                <p>Bachelor's Program</p>
+            <br>
 
-                    <p id="ingress">Lær hvordan du utvikler nye løsninger for samspill mellom mennesker og datateknologi. 
-                        Fra andre studieår kan du spesialisere deg i enda mer programmering eller brukerforståelse.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Laudantium ratione voluptate enim harum alias assumenda ducimus quibusdam eum quam dolorem nostrum,
-                        ab voluptatibus reprehenderit magni atque, pariatur nam et rem.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Voluptatibus libero porro ipsum repellat animi aperiam ex vitae illo placeat provident perferendis
-                        possimus recusandae error, quasi, consequatur eius inventore in asperiores.</p>
+            <table class="indexTable">
+                <tr class="row">
+                    <td>
+                        <strong>Loaction</strong>
+                        <span>Pilestredet i Oslo</span>
+                    </td>
 
-                    <h2>1.sub heading for article</h2>
+                    <td>
+                        <strong>Duration</strong>
+                        <span>3 years</span>
+                    </td>
 
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
-                        ullam deserunt repudiandae at blanditiis velit expedita autem. 
-                        Aliquid quo repudiandae eveniet autem veritatis. Cumque, similique? Soluta.</p>
+                    <td>
+                        <strong>Extent</strong>
+                        <span>Full-time</span>
+                    </td>
+            
+                    <td>
+                        <strong>Credits</strong>
+                        <span>180</span>
+                    </td>
+                </tr>
 
-                    <h2>2.sub heading for article</h2>
-                    
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
-                        ullam deserunt repudiandae at blanditiis velit expedita autem. 
-                        Aliquid quo repudiandae eveniet autem veritatis. Cumque, similique? Soluta.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vitae distinctio accusantium ea,
-                        ullam deserunt repudiandae at blanditiis velit expedita autem. 
-                        Aliquid quo repudiandae eveniet autem veritatis. Cumque, similique? Soluta.</p>
-            </div>
-
-            <div class="secondaryBox">
-
-            </div>
+                <tr class="row">
+                    <td>
+                        <strong>Start of Study</strong>
+                        <span>August</span>   
+                    </td>
+        
+                    <td>
+                        <strong>Language of Instruction</strong>
+                        <span>Norwegian</span>
+                        <span>English</span>
+                    </td>
+                
+                    <td>
+                        <strong>Study Places</strong>
+                        <span>40</span>
+                    </td>
+                </tr>
+            </table>
+            <br>
         </article>
+
+        
+        <div class="IndexDropDown">
+            <p id="indexDropdownParagraph">Gain insight into mathematical models and data-driven methods 
+                that can solve many practical and socially beneficial tasks.</p>
+            <br>
+
+            <button>+</button>
+
+            <div class="content">
+                <a href="">Apple</a>
+                <a href="">Orange</a>
+                <a href="">Banana</a>
+            </div>
+
+        </div>
 
         <aside class="homePage">
             <h2>Sub heading for aside</h2>
