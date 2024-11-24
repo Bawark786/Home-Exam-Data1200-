@@ -441,6 +441,7 @@ header.git-menu {
     width: 90%;
     margin: auto;
     position: sticky;
+    display: block;
     top: 0;
 }
 
@@ -457,6 +458,7 @@ ul.git-navigation-wrapper {
     height: inherit;
     list-style: none;
     display: flex;
+    flex-wrap: nowrap;
     padding: 0;
     margin: auto;
     width: 80%;
@@ -577,7 +579,7 @@ ul.git-image-container > li, img.git-image {
     merging of the "links" between each site
 */
 
-@media (max-width: 750px) {        
+@media (max-width: 770px) {        
     /** Menu **/
     ul.git-navigation-wrapper {
         display: grid; /* Makes the navigation bar display as a drop down menu */
