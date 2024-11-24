@@ -675,7 +675,7 @@ main {
 }
 
 /* Intro Section */
-#intro {
+.intro {
     text-align: center;
     background: linear-gradient(120deg, #48cae4, #90e0ef);
     color: white;
@@ -685,47 +685,79 @@ main {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-#intro h1 {
+.intro h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-#intro p {
+.intro p {
     font-size: 1.2rem;
 }
 
 
-#images {
+.images {
     margin-bottom: 30px;
 }
 
-#images h2 {
+.images h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color: #0077b6;
 }
 
 /* Photo Gallery Section */
+/* Gallery container */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
-    align-items: center;
 }
 
-.gallery img {
+/* Gallery item styling */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.gallery-item img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
-/*https://www.w3schools.com/howto/howto_css_image_overlay.asp  source for image hover*/
-.gallery img:hover {
-    transform: scale(1.05);
+/* Hover effect for image */
+.gallery-item:hover img {
+    transform: scale(1.1);
 }
+
+/* Hover text styling */
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*Making the background a little transparent*/
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show hover text on hover */
+/*https://www.w3schools.com/howto/howto_css_image_overlay.asp  source for image hover*/
+.gallery-item:hover .hover-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 @media (max-width: 768px) {
     .gallery img {
@@ -744,36 +776,36 @@ main {
 
 
 /* Resources Section */
-#resources {
+.resources {
     background-color: #e0f7fa; /* Soft cyan */
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
-#resources h2 {
+.resources h2 {
     color: #0077b6;
     text-align: center;
     margin-bottom: 15px;
 }
 
-#resources ul {
+.resources ul {
     list-style: none;
     padding: 0;
 }
 
-#resources ul li {
+.resources ul li {
     margin: 10px 0;
 }
 
-#resources ul li a {
+.resources ul li a {
     text-decoration: none;
     color: #0077b6;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-#resources ul li a:hover {
+.resources ul li a:hover {
     color: #023e8a;
 }
 
