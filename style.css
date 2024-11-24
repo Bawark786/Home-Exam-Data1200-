@@ -238,76 +238,80 @@ header.homePage{
 /* INDEX MAIN */
 
 
-
-
-
-
-
 /*index Table*/
-.indexTableContainer{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
+
+.content-table{
+    display: block;
+    margin: auto;
+    width: 80%;
 }
 
-.indexTableText{
-    font-size: 20px;
-    margin: 0;
-    padding-left: 200px;
-    padding-right: 200px;
-
+.content-table > h1{
+    font-size: 2rem;
 }
 
-.indexTable{ 
-    display: flex;
+.content-table > p {
+    font-size: 1.5rem
+}
+
+.table {
+    list-style: none;
+    margin: auto;
     flex-wrap: wrap;
-    margin-top: 15px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.indexTable td{
     display: flex;
-    flex-direction: column;
-    padding: 15px;
-    border-top: 1px solid #1a1919;
-    height: 100px;
-    box-sizing: border-box;
-    text-align: left;
-    vertical-align: top;
-    word-wrap: break-word;
-    width: 40%;
+    justify-content: start;
+    align-content: center;
 }
 
-.indexTable .row{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
+.table-item {
+    display: grid;
+    margin: 2rem 2%;
+    min-width: 9rem;
+    width: 20%;
 }
 
+/* 
+    Changes the width of the table items to take up the entire screen.
+    Such that they dont start stacking.
+*/
+@media (max-width: 950px) {
+    .table-item {
+        width: 80%;
+        margin: 0;
+    }
 
-.indexTable td strong{
+    .table {
+        justify-content: center;
+    }
+}
+
+/* Generic classes to show separations line either before or after */
+.top-border::before {
+    margin-top: 0.5rem;
+    background: rgba(0, 0, 0, .2);
+    width: 110%;
+    margin-left: -5%;
+    margin-bottom: 1.5rem;
+    content: "";
+    display: block;
+    height: 1px;
+}
+
+.bottom-border::after {
+    margin-top: 0.5rem;
+    background: rgba(0, 0, 0, .2);
+    width: 110%;
+    margin-left: -5%;
+    margin-top: 2rem;
+    content: "";
+    display: block;
+    height: 1px;
+}
+
+/* Generic class for changing text content */
+.bold {
     font-weight: bold;
-    margin-bottom: 5px;
-    flex-shrink: 0;
 }
-
-
-.indexTable td span{
-    color: #666;
-    flex-grow: 1;
-}
-
-.indexTableText h1{
-    font-size: 40px;
-}
-
-
-
 
 /* DROPDOWN MENU */
 #indexDropdownParagraph{
@@ -318,8 +322,6 @@ header.homePage{
     border-top: 2px solid rgb(216, 216, 216);
     border-bottom: 2px solid rgb(216, 216, 216); 
 }
-
-
 
 .dropDown{
     display: inline-block;
@@ -344,7 +346,7 @@ header.homePage{
     display: none;
     position: absolute;
     background-color: rgb(186, 181, 181);
-    min-width: 200px;
+    min-width: 10rem;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.925);
 }
 
@@ -360,9 +362,6 @@ header.homePage{
     background-color: rgb(65, 8, 65);
     color: white;
 }
-
-
-
 
 /*index secondaryBox*/
 .secondaryBox{
@@ -401,17 +400,11 @@ aside.homePage > p{
     font-size: larger;
 }
 
-
-
-
-
-
-
 /** CSS for the git page **/
 
-:root{--git-color:rgb(25, 25, 25);}
+:root{--git-color:rgb(6, 25, 52);}
 :root{--git-nav-border:white;}
-:root{--git-nav-active:rgba(100,100,100);}
+:root{--git-nav-active:rgb(20, 40, 80);}
 
 /* Nav menu */
 
