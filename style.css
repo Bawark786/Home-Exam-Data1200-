@@ -257,10 +257,12 @@ header.homePage{
 .table {
     list-style: none;
     margin: auto;
+    display: flex;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin-top: 1rem;
     width: 100%;
     box-sizing: border-box;
+    padding: 0;
 }
 
 .indexTable td{
@@ -435,7 +437,8 @@ body.git {
 
 header.git-menu {
     background: var(--git-color);
-    border-bottom: 0.05rem solid var(--git-nav-border);
+    border: 0.05rem solid var(--git-nav-border);
+    border-top: 0;
     border-radius: 0 0 0.5rem 0.5rem;
     padding: 0;
     width: 90%;
@@ -607,7 +610,7 @@ ul.git-image-container > li, img.git-image {
     /* Make the drop down menu visible */
     button.git-menu-button {
         background-color: var(--git-color);
-        border: solid var(--git-nav-border);
+        border-right: solid var(--git-nav-border);
         border-bottom-left-radius: 0.5rem;
         border-width: 0 0.05rem 0.05rem 0.05rem;
         cursor: pointer;
