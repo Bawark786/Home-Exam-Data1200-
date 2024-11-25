@@ -1,12 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta name="description" content="A journey into how we handled accessibility
+        for our pages">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accessibility page</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="scripts/menu-button.js"></script>
+    </head>
+    <body class="git">
+        <header class="git-menu">
+            <nav>
+                <button class="git-menu-button" onclick="dropDownButtton()" aria-expanded="false"
+                aria-controls="navigation-menu" aria-label="Open navigation menu">
+                    <div class="git-menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <ul class="git-navigation-wrapper" id="navigation-menu" role="menubar">
+                    <li class="git-navigation" role="none">
+                        <a href="index.html" role="menuitem">
+                            <div class="git-nav-text">Home</div>
+                        </a>
+                    </li>
+                    <li class="git-navigation git-active" role="none">
+                        <a href="accessibility.html" role="menuitem">
+                            <div class="git-nav-text">Accessibility</div>
+                        </a>
+                    </li>
+                    <li class="git-navigation" role="none">
+                        <a href="activity.html" role="menuitem">
+                            <div class="git-nav-text">Activity</div>
+                        </a>
+                    </li>
+                    <li class="git-navigation" role="none">
+                        <a href="github.html" role="menuitem">
+                            <div class="git-nav-text">Github</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article class="git-article">
+                <section class="git-article-body bottom-border">
+                    <h1 class="git-article-headline">
+                        What does accessibility mean for a website?   
+                    </h1>
+                    <p> 
+                        Accessibility for a website is the ability for everyone to access and use it, despite disabilities.
+                        The reason we strive for accessibility on website, is because it makes information more open for everyone.
+                        Which is increasingly important in a society that is moving more and more online such as our own.
+                    </p>
+                </section>
+                <section class="git-article-body bottom-border">
+                    <!-- Main body -->
+                    <h2>
+                        How do you measure accessibility?
+                    </h2>
+                    <p> 
+                        For our automated tests we used google lighthouse.
+                        Not only is lighthouse built into the chrome browser, but it was also a fantastic tool for us to create a foundation to bounce off.
+                        Using lighthouse, we got direct feedback on what we should and shouldn’t do to increase the accessibility.
+                    </p>
+                    <ul class="git-image-container">
+                        <li><img alt="Example of a Lighthouse score" src="Images/Git_page_desktop_before.png" class="git-image"></img></li>
+                    </ul>
+                </section>
+                <section class="git-article-body bottom-border">
+                    <h2 class="bold">
+                        Our road towards accessibility
+                    </h2>
+                    <p>
+                        When we first started making the websites we threw the div element everywhere, we weren’t as concerned for accessibility when we built out the structure of our website.
+                        However, just like any process, we iterated and refined our websites.
+                    </p>
+                    <p>
+                        This came in the form of changing the ocean of div elements into native elements that are meant for the content within, which also came with the benefit of increasing the accessibility of the content.
+                        Below are two pictures that show one of the small changes that we made.
+                    </p>
+                    <ul class="git-image-container">
+                        <li><img alt="Showing the HTML structure, when we used divs" src="Images/Div_usage_before.png" class="git-image"></img></li>
+                        <li><img alt="Showing the HTML structure after we switched to using native elements" src="Images/Switch_to_section.png" class="git-image"></img></li>
+                    </ul>
+                    <p>
+                        Other ways we move towards accessibility was with the tags such as the alt tag, and aria labels.
+                        The alt tag directly increased our accessibility score, yet there are still ways we can increase the accessibility.
+                    </p>
+                    <p>
+                        With aria-labels and aria-content we can tell screen readers what sort of content a section of the page includes, or what a section of an article is about.
+                    </p>
+                </section>
+                <section class="git-article-body bottom-border">
+                    <!-- Conclusion -->
+                    <h2>
+                        Our scores
+                    </h2>
+                    <p> 
+                        When we first saw our score, we were a little shaken especially since we weren’t even done with our websites.
+                        It felt like we had to think about everything.
+                        So, we took a step back and talked, because the scores we got above didn’t meet our expectations.
+                    </p>
+                    <ul class="git-image-container">
+                        <li><img alt="Our lighthouse score before working towards accessibility" src="Images/Git_page_desktop_before.png" class="git-image">
+                            In the picture above you can see the score for one of our pages.
+                            However, the score for each of the other sites were pretty similar
+                        </img></li>
+                    </ul> 
+                    <p>
+                        After some talking, we concluded that even though the accessibility score should be in the forefront of our thoughts, it wouldn’t matter if we couldn’t get the sites done.
+                        Therefore, we concluded that we should rather focus on accessibility after we got the sites somewhat done.
+                    </p>
+                </section>
+                <section class="git-article-body">
+                    <h2>
+                        The cherry on top
+                    </h2>
+                    <p>
+                        After we got finished with making the sites accessible, we got to work trying to ruin them as much as possible.
+                        We tried every browser we could think of.
+                        Moreover, we even tried all imaginable combinations of screen sizes, yet nothing broke.
+                    </p>
+                    <p>               
+                        However, when it came to trying to navigate the sites with our keyboards, we found something.
+                        We couldn’t use the drop-down menu.
+                        The worst part, we couldn’t find out why.
+                        Our solution ended up having to switch our drop-down button from a label element to a button element, and write some custom javascript code so it would work.
+                    </p>
+                    <ul class="git-image-container">
+                        <li><img alt="Lighthouse score for Index/Main page" src="Images/Index_page_mobile.png" class="git-image">Index/Home page</img></li>
+                        <li><img alt="Lighthouse score for Accessibility page" src="Images/Accessibility_page_mobile.png" class="git-image">Accessibility page</img></li>
+                    </ul>
+                    <ul class="git-image-container">
+                        <li><img alt="Lighthouse score for Activity page" src="Images/Activity_page_desktop.png" class="git-image">Activity page</img></li>
+                        <li><img alt="Lighthouse score for Git page" src="Images/Git_page_desktop.png" class="git-image">github page</img></li>
+                    </ul> 
+                    <p>
+                        Above you can see our lighthouse score after all these changes. 
+                        The scores also reflect onto the pages on mobile
+                        Even though the scores were perfect, we still needed to check each site manually.
+                    </p>
+                </section>
+            </article>
+        </main>
+    </body>
+    <footer>
+        <section class="footerLeft">
+            <p>Contact</p>
+        </section>
+
+        <section class="footerMiddle">
+            <p>About us</p>
+        </section>
+
+        <section class="footerRight">
+            <p>
+                Address <br>
+                Thomensens gate 45<br>
+                Oslo 
+            </p>
+        </section>
+    </footer>
 </html>
