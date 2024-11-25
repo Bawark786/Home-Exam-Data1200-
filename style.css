@@ -446,7 +446,29 @@ header.homePage{
     text-decoration: none;
     display: block;
     color: inherit;
-    padding
+    padding: 10px 0;
+}
+
+#menu9H{
+    font-size: 18px;
+    font-weight: bold;
+    color: #061934;
+    margin:0;
+}
+
+#menu9S{
+    font-size: 16px;
+    color:#555;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.menu9Link:hover #menu9H{
+    color: #0078d4;
+}
+
+.menu9Link:hover #menu9S{
+    color: #333;
 }
 
 
