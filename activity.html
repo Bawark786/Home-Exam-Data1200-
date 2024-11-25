@@ -5,15 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity Page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts/menu-button.js"></script>
 </head>
-<body class="activity">
-    <header>
+<body class="git">
+    <header class="git-menu">
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="activity.html">Activity</a></li>
-                <li><a href="accessibility.html">Accessibility</a></li>
-                <li><a href="github.html">GitHub</a></li>
+            <button class="git-menu-button" onclick="dropDownButtton()" aria-expanded="false"
+            aria-controls="navigation-menu" aria-label="Open navigation menu">
+                <div class="git-menu-button" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <ul class="git-navigation-wrapper" id="navigation-menu" role="menubar">
+                <li class="git-navigation" role="none">
+                    <a href="index.html" role="menuitem">
+                        <div class="git-nav-text">Home</div>
+                    </a>
+                </li>
+                <li class="git-navigation" role="none">
+                    <a href="accessibility.html" role="menuitem">
+                        <div class="git-nav-text">Accessibility</div>
+                    </a>
+                </li>
+                <li class="git-navigation" role="none">
+                    <a href="activity.html" role="menuitem">
+                        <div class="git-nav-text">Activity</div>
+                    </a>
+                </li>
+                <li class="git-navigation git-active" role="none">
+                    <a href="github.html" role="menuitem">
+                        <div class="git-nav-text">Github</div>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
