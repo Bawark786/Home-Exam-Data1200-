@@ -744,6 +744,7 @@ article.git-article {
     margin: 3rem auto;
     padding: 2rem;
     border-radius: 1rem;
+    line-height: 1.5rem;
     box-shadow: /* Generated with https://shadows.brumm.af */
         -1.4px -2px 22.8px rgba(0, 0, 0, 0.08),
         1.5px 2px 30px rgba(0, 0, 0, 0.063),
@@ -756,17 +757,6 @@ article.git-article {
 section.git-article-body {
     width: 90%;
     margin: auto;
-}
-
-section.git-article-body::after {
-    margin-top: 0.5rem;
-    background: rgba(0, 0, 0, .2);
-    width: 110%;
-    margin-left: -5%;
-    margin-top: 2rem;
-    content: "";
-    display: block;
-    height: 1px;
 }
 
 section.git-article-body > * {
