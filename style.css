@@ -1,7 +1,5 @@
 /** CSS for index.html **/
 
-:root{--indexBrown:rgb(66, 31, 31);}
-
 /** BODY **/
 
 body.homePage{
@@ -17,7 +15,6 @@ header.homePage{
     flex-direction: row;
     justify-content: space-between;
     align-items: center; 
-    background-color: var(--indexBrown);
     padding: 20px 15px;
     padding-bottom: 15px;
     width: 100%;
@@ -113,7 +110,6 @@ header.homePage{
 #indexMenu:checked + .indexMenuButton + .indexNavList{
     display: flex;
     flex-direction: column;
-    background-color: var(--indexBrown);
     position: fixed;
     top: 0; /*Below the header*/
     left: 0;
@@ -235,8 +231,6 @@ header.homePage{
 
 
 
-/* INDEX MAIN */
-
 
 /*index Table*/
 
@@ -259,7 +253,6 @@ header.homePage{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1rem;
     width: 100%;
     box-sizing: border-box;
     padding: 0;
@@ -322,31 +315,48 @@ header.homePage{
 }
 
 /* DROPDOWN MENU */
-#indexDropdownParagraph{
-    font-size: 23px;
+#dropdownParagraph{
+    font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 15px;
+    padding-top: 30px;
     padding-left: 400px;
     padding-right: 400px;
     border-top: 2px solid rgb(216, 216, 216);
-    border-bottom: 2px solid rgb(216, 216, 216); 
 }
 
-.dropDown{
-    display: inline-block;
+.dropdown{
+    display: block;
+    border-top: 2px solid rgb(216, 216, 216);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: auto;
+    width: 70%;
+  
+}
+
+.dropdown input[type="checkbox"]{
+    display: none;
 }
 
 .dropdownButton{
     background-color: transparent;
-    color: rgb(0, 0, 0);
     padding: 10px 15px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 100%;    
     display: flex;
     align-items: center;
     text-align: left;
     gap: 35px;
+}
+
+.menu3Button{
+    cursor: pointer;
+    width: 100%;   
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    padding: auto;
 }
 
 .plusSign{
@@ -354,35 +364,108 @@ header.homePage{
     font-weight: bold;
 }
 
-.dropdownLabel{
-    font-size: 18x;
+.menuPlusSign{
+    font-size: 20px;
     font-weight: bold;
 }
 
-.indexDropdownContent{
+.dropdownLabel{
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.dropdownContent{
     display: none;
-    position: absolute;
-    background-color: rgb(186, 181, 181);
-    min-width: 10rem;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.925);
-}
-
-
-.indexDropdown input[type="checkbox"]:checked +  .dropdownButton + .indexDropdownContent{
-    display: block;
-}
-
-.indexDropdown a{
-    display: block;
-    color: black;
-    text-decoration: none;
+    background-color: transparent;
     padding: 10px 15px;
+    margin-top: 10px;
 }
 
-.indexDropdown a:hover{
-    background-color: rgb(65, 8, 65);
-    color: white;
+.menu3Content{
+    display: none;
+    background-color: transparent;
+    padding: 0 25px;
 }
+
+.dropdown input[type="checkbox"]:checked +  .dropdownButton + .dropdownContent,
+.menu3 input[type="checkbox"]:checked + .menu3Button + .menu3Content{
+    display: block;
+}
+
+
+#menu3Link::before{
+    content: ">";
+    padding: 15px;
+}
+
+/* Menu 4 */
+
+.dropdownContent .table{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* flexible columns */
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding: 0px 40px;
+}
+
+.dropdownContent .table-item{
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.dropdownContent .table-item:hover{
+    transform: scale(1.05);
+    background-color: #eaeaea;
+}
+
+.dropdownContent .table-item .bold{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.dropdownContent .table-item > p{
+    font-size: 0.9rem;
+    margin: 0;
+    color: #555;
+}
+
+
+.dropdownContent .table-item a:hover{
+    text-decoration: underline;
+}
+
+/* Menu 9
+
+/* make sure design stays responsive */
+@media (max-width: 768px){
+    .dropdownContent .table{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .dropdownContent .table-item{
+        text-align: left;
+    }
+}
+
+.dropdown a{
+    display: block;
+    color: rgb(6, 25, 52);
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
+
+
+
 
 /*index secondaryBox*/
 .secondaryBox{
@@ -421,6 +504,7 @@ aside.homePage > p{
     font-size: larger;
 }
 
+
 /** CSS for the git page **/
 
 :root{--git-color:rgb(6, 25, 52);}
@@ -446,6 +530,7 @@ header.git-menu {
     position: sticky;
     display: block;
     top: 0;
+    z-index: 999;
 }
 
 header.git-menu, header.git-menu > nav {
