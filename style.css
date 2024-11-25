@@ -441,7 +441,14 @@ header.homePage{
     text-decoration: underline;
 }
 
-/* Menu 9
+/* Menu 9 */
+.menu9Link{
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    padding
+}
+
 
 /* make sure design stays responsive */
 @media (max-width: 768px){
@@ -460,26 +467,146 @@ header.homePage{
     color: rgb(6, 25, 52);
     text-decoration: underline;
     font-weight: bold;
+}
+
+/* LAST HOME PAGE */
+
+.lastHomePage{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 
 }
 
-
-
-
-
-/*index secondaryBox*/
-.secondaryBox{
-    background-image:url(images/index.smiley.jpg);
-    height: 60vw;
+.lastHomePage h2{
+    font-size: 20px;
+    margin: 16px 0 8px;
+    color: #222;
 }
 
-/*index aside*/
-aside.homePage{
-    background-color:rgb(150, 175, 174);
-    padding-left: 1em;
-    padding-top: 0.1em;
-    padding-bottom: 0.75em;
+.academicLeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
 }
+
+.academicLink{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background-color 0.3s ease;
+}
+
+
+.profileImage img{
+    width: 64px;
+    height: 64px;
+    border-radius: 25%;
+    object-fit: cover;
+    margin-right: 16px;
+}
+
+.profileinfo{
+    flex-grow: 1;
+}
+
+.profileInfo h3{
+    font-size: 16px;
+    margin: 0 0 4px;
+    color: #333
+}
+
+.profileInfo p{
+    margin: 2px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.contactInfo{
+    font-size: 12px;
+    color: #777;
+}
+
+.arrow{
+    font-size: 24px;
+    color: #888;
+    transition: transform 0.3s ease;
+    padding-left: 40px;
+}
+
+.academicLink:hover .arrow{
+    transform: translateX(5px);
+    color:rgb(6, 5, 40)
+}
+
+.lastLink:hover{
+    color:#212f42;
+}
+
+.lastLink{
+    display: block;
+    color: rgb(6, 25, 52);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* Last home page TABLE */
+
+.lastHomePage .table{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #ddd;
+}
+
+.lastHomePage .table-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lastHomePage .table-item p{
+    margin: 0;
+    font-size: 16;
+    color: #333;
+}
+
+.lastHomePage .table-item span.bold{
+    font-weight: bold;
+    color: #000;
+}
+
+.lastHomePage .arrow{
+    font-size: 20px;
+    color: #555;
+    transition: transform 0.3s ease;
+}
+
+.lastHomePage .table-item:hover .arrow{
+    transform: translateX(5px);
+}
+
 
 
 /** INDEX TEXT FORMATING **/
@@ -497,12 +624,7 @@ aside.homePage{
     color: rgb(51, 51, 51);
 }
 
-/*index article paragaph*/
-aside.homePage > p{
-    font-family:'Times New Roman', Times, serif;
-    font-style: oblique;
-    font-size: larger;
-}
+
 
 
 /** CSS for the git page **/
